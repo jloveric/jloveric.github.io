@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Terminal from 'terminal-in-react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+        <Terminal
+          hideTopBar='true'
+          allowTabs='true'
+          startState="maximised"
+          color='green'
+          backgroundColor='black'
+          barColor='black'
+          style={{ fontWeight: "bold", fontSize: "1em", width: "100%" }}
+          commandPassThrough={cmd => { 
+            return `You said ${cmd.join(' ')}!  This will be connected to the client neural chat bot soon! Stay tuned.`
+          }}
+          msg='MU-TH-UR 6000 ... Hello Lt. Ripley'
+        />
+      
+    );
+  
 }
+
 
 export default App;

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Terminal from 'terminal-in-react';
+import 'Chatbot'
 //import {XTerm, Terminal} from 'react-xterm'
 
 import './App.css';
 
 function App() {
+
   return (
     
         <Terminal
@@ -19,7 +21,7 @@ function App() {
           commandPassThrough={cmd => { 
             return `You said ${cmd.join(' ')}!  This will be connected to the client neural chat bot soon! Stay tuned.`
           }}
-          msg="John Loverich Bot - Under Construction"
+          msg="JLO Bot - Under Construction"
         />
 
         /*<XTerm ref='xterm' style={{
@@ -29,7 +31,6 @@ function App() {
           width: '100%',
           height: '100%'
         }} />*/
-        
       
     );
   

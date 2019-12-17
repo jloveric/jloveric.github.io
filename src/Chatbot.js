@@ -1,4 +1,4 @@
-import { response } from 'neural-chatbot';
+import { BasicBot } from 'neural-chatbot';
 import { UserData } from 'neural-phrasex';
 
 let db = {
@@ -76,21 +76,20 @@ let conf = {
   database: db,
   fileDatabase: 'filesystem',
   user: 'root',
-  filename: path,
   doc: {
     description: {
-      name: rootName,
+      name: 'JLO',
     },
   },
   phraseTable: 'dudephrases',
 }
 
-initialize = async() => {
-  let bot = new response.BasicBot()
+let initialize = async() => {
+  let bot = new BasicBot()
   await bot.initialize(conf)
   let userData = UserData()
   userData.initialize()
   return { bot, userData }
 }
 
-export function initialize()
+export default initialize

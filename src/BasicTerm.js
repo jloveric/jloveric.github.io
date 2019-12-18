@@ -82,7 +82,7 @@ class BotTerm extends Component {
   }
 
   render() {
-    return (<form id="mainForm" onSubmit={this.handleSubmit.bind(this)} style={{border:'none', autocomplete:"off"}}>
+    return (<form id="mainForm" autocomplete="off" onSubmit={this.handleSubmit.bind(this)} style={{border:'none'}}>
       {
         this.state.list.map((val, id) => {
           return <div key={id} style={{ color: val.color, borderColor: this.props.backgroundColor , border: 'none'}}>
@@ -91,7 +91,7 @@ class BotTerm extends Component {
         })
       }
       <label style={{}}>{this.props.userSymbol}</label>
-      <input type="text" name="name_" value={this.state.value} onChange={this.handleChange.bind(this)} style={{ backgroundColor: this.props.backgroundColor, color: this.props.userColor, border: "none", autocomplete:"off", outline:"none" }} />
+      <input type="text" name="name" value={this.state.value} onChange={this.handleChange.bind(this)} style={{ backgroundColor: this.props.backgroundColor, color: this.props.userColor, border: "none", autocomplete:"off", outline:"none" }} />
     </form>)
   }
 }

@@ -87,7 +87,7 @@ let conf = {
 let initialize = async() => {
   let bot = new BasicBot()
   await bot.initialize(conf)
-  let userData = UserData()
+  let userData = new UserData()
   userData.initialize()
   return { bot, userData }
 }

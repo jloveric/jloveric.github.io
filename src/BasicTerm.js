@@ -10,7 +10,9 @@ class BotTerm extends Component {
     botColor : 'green',
     userColor : 'blue',
     botSymbol : '',
-    userSymbol : '>'
+    userSymbol : '>',
+    startMessage : "Hello, I'm starting up.  The whole thing runs client side so nothing you say is sent to external servers.",
+    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good."
   }
 
   constructor(props) {
@@ -51,11 +53,11 @@ class BotTerm extends Component {
   }
 
   componentDidMount() {
-    this.addTextClear("Hello, I'm starting up.", this.computeBotText.bind(this))
+    this.addTextClear(this.props.startMessage, this.computeBotText.bind(this))
     result.then((ans) => {
       this.userData = ans.userData
       this.bot = ans.bot
-      this.addText("Ok, I've finished loading my brain.  This is good.", this.computeBotText.bind(this))
+      this.addText(this.props.finishedLoadingMessage, this.computeBotText.bind(this))
     })
   }
 

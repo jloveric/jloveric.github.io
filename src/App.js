@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BotComponent from './BotComponent';
 import BotTerm from './BasicTerm';
 
 import './App.css';

@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div style={{ margin: '2%' }}>
-      <BotTerm></BotTerm>
+      <BotTerm backgroundColor='black'></BotTerm>
     </div>
   );
 

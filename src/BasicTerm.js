@@ -12,7 +12,7 @@ class BotTerm extends Component {
     botSymbol : '',
     userSymbol : '>',
     startMessage : "Hello, I'm starting up.  The whole thing runs client side so nothing you say is sent to external servers.",
-    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good. Yes this is a retro theme.  Still one major bug so be patient!",
+    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good. Yes this is a retro theme.",
     fontSize : "large"
   }
 
@@ -89,15 +89,19 @@ class BotTerm extends Component {
     this.addTextClear(inputValue, this.computeUserText.bind(this))
 
     if(this.bot) {
+      try {
       let ans = await this.bot.getResult(inputValue, this.userData)
       this.addTextClear(ans.response, this.computeBotText.bind(this))
       console.log('ans',ans.response)
+      } catch(error) {
+        console.log('error', error)
+      }
       return 'Testing'
     }
   }
 
   render() {
-    return (<form id="mainForm" autoComplete="off" onSubmit={this.handleSubmit.bind(this)} style={{border:'none', "fontSize" : this.props.fontSize}}>
+    return (<form id="mainForm" autoComplete="off" onSubmit={this.handleSubmit.bind(this)} style={{backgroundColor: this.props.backgroundColor, border:'none', "fontSize" : this.props.fontSize}}>
       {
         this.state.list.map((val, id) => {
           return <div key={id} style={{ color: val.color, borderColor: this.props.backgroundColor , border: 'none'}}>

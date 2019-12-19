@@ -1,5 +1,4 @@
 import React from 'react';
-import BotTerm from './BasicTerm';
 import NeuralChatbotReactRetro from 'neural-chatbot-react-retro'
 
 import './App.css';

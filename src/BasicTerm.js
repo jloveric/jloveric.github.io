@@ -12,7 +12,7 @@ class BotTerm extends Component {
     botSymbol : '',
     userSymbol : '>',
     startMessage : "Hello, I'm starting up.  The whole thing runs client side so nothing you say is sent to external servers.",
-    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good. Yes this is a retro theme.",
+    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good. Yes this is a retro theme.  Still one major bug so be patient!",
     fontSize : "large"
   }
 
@@ -68,6 +68,8 @@ class BotTerm extends Component {
     result.then((ans) => {
       this.userData = ans.userData
       this.bot = ans.bot
+      this.conf = ans.conf
+      console.log('ans.conf',ans.conf)
       this.addText(this.props.finishedLoadingMessage, this.computeBotText.bind(this))
     })
   }

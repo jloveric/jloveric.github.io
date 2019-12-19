@@ -9,7 +9,7 @@ let db = {
       "response": ["My name is Bot"],
       "phraseType": "job",
       "implies": [
-        "movie"
+        "whatIsYourName"
       ],
       "target": [
       ],
@@ -17,7 +17,7 @@ let db = {
         "style": [
           "nosearch"
         ],
-        "group": "job"
+        "group": "name"
       }
     },
     {
@@ -110,7 +110,7 @@ let initialize = async() => {
   await bot.initialize(conf)
   let userData = new UserData()
   userData.initialize()
-  return { bot, userData }
+  return { bot, userData, conf }
 }
 
 export default initialize

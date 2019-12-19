@@ -1,5 +1,6 @@
 import React from 'react';
 import BotTerm from './BasicTerm';
+import NeuralChatbotReactRetro from 'neural-chatbot-react-retro'
 
 import './App.css';
 
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div style={{ margin: '2%' }}>
-      <BotTerm backgroundColor='black'></BotTerm>
+      <NeuralChatbotReactRetro backgroundColor='black'></NeuralChatbotReactRetro>
     </div>
   );
 

@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.3.3",
     "@testing-library/user-event": "^7.1.2",
     "neural-chatbot": "^2.0.8",
+    "neural-chatbot-react-retro": "^0.1.2",
     "neural-phrasex": "^1.0.11",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BotTerm from './BasicTerm';
 
 import './App.css';

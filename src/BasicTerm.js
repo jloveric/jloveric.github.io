@@ -8,15 +8,16 @@ class BotTerm extends Component {
   static defaultProps = {
     backgroundColor : 'black',
     botColor : 'green',
-    userColor : 'blue',
+    userColor : 'orange',
     botSymbol : '',
     userSymbol : '>',
     startMessage : "Hello, I'm starting up.  The whole thing runs client side so nothing you say is sent to external servers.",
-    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good."
+    finishedLoadingMessage : "Ok, I've finished loading my brain.  This is good. Yes this is a retro theme.",
+    fontSize : "large"
   }
 
   constructor(props) {
-    super()
+    super(props)
     this.props = props
     
     this.state = {
@@ -27,6 +28,16 @@ class BotTerm extends Component {
 
     this.userData = null
     this.bot = null
+
+    // create a ref to store the textInput DOM element
+    this.textInput = React.createRef();
+    this.focus = this.focus.bind(this);
+  }
+
+  focus() {
+    // Explicitly focus the text input using the raw DOM API
+    // Note: we're accessing "current" to get the DOM node
+    this.textInput.current.focus();
   }
 
   computeBotText(text) {
@@ -84,16 +95,17 @@ class BotTerm extends Component {
   }
 
   render() {
-    return (<form id="mainForm" autocomplete="off" onSubmit={this.handleSubmit.bind(this)} style={{border:'none'}}>
+    return (<form id="mainForm" autoComplete="off" onSubmit={this.handleSubmit.bind(this)} style={{border:'none', "fontSize" : this.props.fontSize}}>
       {
         this.state.list.map((val, id) => {
           return <div key={id} style={{ color: val.color, borderColor: this.props.backgroundColor , border: 'none'}}>
-            {val.symbol + ' ' + val.text}
+            {val.symbol + val.text}
           </div>
         })
       }
-      <label style={{}}>{this.props.userSymbol}</label>
-      <input type="text" name="name" value={this.state.value} onChange={this.handleChange.bind(this)} style={{ backgroundColor: this.props.backgroundColor, color: this.props.userColor, border: "none", autocomplete:"off", outline:"none" }} />
+      <div style={{color: this.props.userColor, display: "inline-block", "textAlign": "right"}}>{this.props.userSymbol}</div>
+      <input ref={this.textInput} autoFocus type="text" name="name" value={this.state.value} onChange={this.handleChange.bind(this)} 
+        style={{ "fontSize" : this.props.fontSize, backgroundColor: this.props.backgroundColor, color: this.props.userColor, border: "none", autoComplete:"off", outline:"none" }} />
     </form>)
   }
 }

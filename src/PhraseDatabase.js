@@ -60,22 +60,12 @@ let db = {
         {
             "phrase": [
                 "You are smart",
-                "You look nice",
                 "you are good",
                 "DAMN",
                 "this is great",
                 "this is awesome",
                 "this is fantastic",
-                "this rules",
-                "this is pretty good",
-                "this is really good",
-                "this is good",
-                "this is epic",
-                "amazing",
-                "this is impressive",
-                "holy cow",
-                "this is excellent",
-                "really gnarly"
+                "this rules"
             ],
             "response": [
                 "thanks",
@@ -118,12 +108,7 @@ let db = {
         {
             "phrase": [
                 "thanks",
-                "thx",
                 "thank you",
-                "danke",
-                "gracias",
-                "merci",
-                "much obliged"
             ],
             "response": [
                 "welcome",
@@ -147,16 +132,7 @@ let db = {
             "phrase": [
                 "ok",
                 "good",
-                "uh",
-                "uh huh",
-                "um",
-                "okay",
-                "oky dokey",
                 "well",
-                "you know",
-                "yep",
-                "yeah",
-                "nice"
             ],
             "response": [
                 "ok",
@@ -176,41 +152,14 @@ let db = {
         },
         {
             "phrase": [
-                "by",
-                "buh bye",
-                "bye now",
-                "good bye",
-                "bye bye",
-                "adios",
+                "bye",
                 "see you",
-                "cu",
-                "hasta luego",
-                "goodbye",
-                "cheers",
-                "bon voyage",
                 "later",
-                "later aligator",
-                "have a good day",
-                "see ya",
-                "c ya",
-                "good day",
-                "ahoy"
             ],
             "response": [
                 "bye now",
                 "good bye",
-                "bye bye",
-                "adios",
-                "see you",
-                "cu",
-                "hasta luego",
-                "goodbye",
-                "cheers",
                 "bon voyage",
-                "later",
-                "later aligator",
-                "have a good day",
-                "see ya",
                 "c ya"
             ],
             "phraseType": "goodbye",
@@ -229,12 +178,7 @@ let db = {
             "phrase": [
                 "hello",
                 "how are you",
-                "hi",
-                "yo",
-                "whats up",
-                "hey",
-                "good day",
-                "ahem"
+                "hi"
             ],
             "response": [
                 "Hi my friend, what can I do for you?",
@@ -336,27 +280,6 @@ let db = {
         },
         {
             "phrase": [
-                "Information",
-                "Info",
-                "411",
-                "Tell me about yourself, bot"
-            ],
-            "response": [
-                "Here is what I know"
-            ],
-            "phraseType": "info",
-            "implies": [
-                "help"
-            ],
-            "target": [
-                "bot"
-            ],
-            "meta": {
-                "group": "info"
-            }
-        },
-        {
-            "phrase": [
                 "Help!",
                 "wtf",
                 "Shit!",
@@ -380,9 +303,6 @@ let db = {
         {
             "phrase": [
                 "What is your name?",
-                "What are you called?",
-                "Who is this",
-                "Who are you"
             ],
             "response": [
                 "My name is (value)",
@@ -404,9 +324,6 @@ let db = {
         {
             "phrase": [
                 "Who am I speaking to",
-                "Who is talking",
-                "Who is speaking",
-                "Who am I talking to"
             ],
             "response": [
                 "(value) is speaking",
@@ -423,75 +340,6 @@ let db = {
             "storage": "askYourName",
             "meta": {
                 "group": "identity talking"
-            }
-        },
-        {
-            "phrase": [
-                "I want to speak with (name)",
-                "Let me talk with (name)",
-                "Let me talk to (name)",
-                "Lets talk to (name)",
-                "Let me talk to (name)",
-                "Can I talk with (name)",
-                "Come forward (name)",
-                "Where are you (name)",
-                "Put (name) on the phone",
-                "Let me text with (name)",
-                "I would like to text with (name)",
-                "Let me speak with (name)",
-                "Talk to (name)",
-                "Talk (name)",
-                "Send (name) to me",
-                "Summon (name)",
-                "Conjure (name)",
-                "May I speak with (name)"
-            ],
-            "response": [
-                "Ok, I'm switching you to (name)",
-                "You have chosen to speak with (name). Good luck!",
-                "Now you are speaking with (name)",
-                "(name) is ready to text!"
-            ],
-            "negative": [
-                "I don't know any (name)"
-            ],
-            "phraseType": "request",
-            "implies": [
-                "person"
-            ],
-            "target": [
-                "name"
-            ],
-            "meta": {
-                "group": "request bot"
-            }
-        },
-        {
-            "phrase": [
-                "Who can I talk to about (item)"
-            ],
-            "response": [
-                "You can talk to (value) about (item)"
-            ],
-            "continue": [
-                "(value) about (item)"
-            ],
-            "negative": [
-                "It doesn't seem anybody knows about (item)",
-                "There is nobody you can talk to."
-            ],
-            "phraseType": "query",
-            "implies": [
-                "person"
-            ],
-            "target": [
-                "item"
-            ],
-            "meta": {
-                "style": [
-                    "item"
-                ],
-                "group": "show person"
             }
         },
         {
@@ -578,76 +426,6 @@ let db = {
                     "singular"
                 ],
                 "group": "location"
-            }
-        },
-        {
-            exampleWildcards: { item: "apple", value: "10 dollars" },
-            "phrase": [
-                "How much does the (item) cost",
-                "How much is the (item)",
-                "What is the price of (item)",
-                "What is the cost of (item)",
-                "What price is the (item)",
-                "What cost is the (item)",
-                "What price is (item)",
-                "What price (item)",
-                "price (item)",
-                "cost (item)",
-                "$ (item)"
-            ],
-            "response": [
-                "The (item) costs (value)"
-            ],
-            "continue": [
-                "(item) costs (value)"
-            ],
-            "negative": [
-                "There is no (item)"
-            ],
-            "phraseType": "query",
-            "implies": [
-                "price"
-            ],
-            "target": [
-                "item"
-            ],
-            "storage": "standardPrice",
-            "meta": {
-                "group": "price"
-            }
-        },
-        {
-            "phrase": [
-                "Do you have any (item)",
-                "Do you sell any (item)",
-                "Can I buy (item)",
-                "Any (item)",
-                "Can I purchase (item)",
-                "Are there any (item)",
-                "Do you have (item)",
-                "Do you sell (item)",
-                "I want some (item)",
-                "I would like some (item)"
-            ],
-            "response": [
-                "Yes, we have (item)"
-            ],
-            "negative": [
-                "We don't have (item)"
-            ],
-            "continue": [
-                "(item)"
-            ],
-            "phraseType": "query",
-            "implies": [
-                "existence"
-            ],
-            "target": [
-                "item"
-            ],
-            "storage": "standardExists",
-            "meta": {
-                "group": "existence"
             }
         }
     ]

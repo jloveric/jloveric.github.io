@@ -12,25 +12,10 @@ let db = {
         },
         {
             "phrase": [
-                "privacy"
-            ],
-            "phraseType": "privacy",
-            "implies": [
-                "privacy"
-            ],
-            "target": [
-                "privacy"
-            ],
-            "meta": {
-                "group": "privacy"
-            }
-        },
-        {
-            "phrase": [
                 "Who is your maker?",
             ],
             response : ["John Loverich"],
-            "phraseType": "ask switch bot",
+            "phraseType": "whoMadeYou",
             "implies": [
                 "whoMadeYou"
             ],
@@ -39,7 +24,7 @@ let db = {
             ],
             "meta": {
                 style : ["nosearch"],
-                "group": "ask switch bot"
+                "group": "whoMadeYou"
             }
         },
         {

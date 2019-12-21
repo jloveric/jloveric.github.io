@@ -2,6 +2,7 @@
 let db = {
     "data": [
         {
+            exampleWildcards : {},
             "phrase": ["What did I say", "What do you think I said", "What was I talking about?"],
             "phraseType": "whatsaid",
             "implies": ["whatsaid"],
@@ -11,6 +12,7 @@ let db = {
             }
         },
         {
+            exampleWildcards : {},
             "phrase": [
                 "Who is your maker?",
             ],

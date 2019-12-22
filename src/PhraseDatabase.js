@@ -2,7 +2,7 @@
 let db = {
     "data": [
         {
-            exampleWildcards : {},
+            exampleWildcards: {},
             "phrase": ["What did I say", "What do you think I said", "What was I talking about?"],
             "phraseType": "whatsaid",
             "implies": ["whatsaid"],
@@ -12,11 +12,11 @@ let db = {
             }
         },
         {
-            exampleWildcards : {},
+            exampleWildcards: {},
             "phrase": [
                 "Who is your maker?",
             ],
-            response : ["John Loverich"],
+            response: ["John Loverich"],
             "phraseType": "whoMadeYou",
             "implies": [
                 "whoMadeYou"
@@ -25,7 +25,7 @@ let db = {
                 "name"
             ],
             "meta": {
-                style : ["nosearch"],
+                style: ["nosearch"],
                 "group": "whoMadeYou"
             }
         },
@@ -431,12 +431,30 @@ let db = {
     ]
 }
 
+//let detailedHelp = "Ok, you have accessed the help feature, I can't do anything for you now!"
+
+let text = []
+text.push('<div class="ui help" style="text-align:left;">Welcome to the Bot</div>')
+text.push('<div class="ui bulleted list help" style="text-align:left;">')
+text.push('<div class="item">Type <span>\'hello\' </span> to see which bot you are talking to or type <span>\'who am I speaking to\'<\span>.</div>')
+text.push('<div class="item">Type <span>\'what did I say\'</span> to see what I think you said.</div>')
+text.push('<div class="item">More coming.</div>')
+text.push('<p></p>')
+text.push('<div class="ui help" style="text-align:left;">I am built off of the following packages.</div>')
+text.push('<div><a href="https://github.com/jloveric/NeuralSentenceSearch/" target="_blank">NeuralSentenceSearch</a></div>')
+text.push('<div><a href="https://github.com/jloveric/NeuralPhraseX" target="_blank">NeuralPhraseX</a></div>')
+text.push('<div><a href="https://github.com/jloveric/NeuralChatbot" target="_blank">NeuralChatBot</a></div>')
+text.push('<div><a href="https://github.com/jloveric/neural-chatbot-react-retro" target="_blank">neural-chatbot-react-retro</a></div>')
+
+let detailedHelp = text.join(' ')
+
 let defaultConfig = {
     database: db,
     user: 'root',
     doc: {
         description: {
             name: 'Bot',
+            help: detailedHelp
         },
     },
 }

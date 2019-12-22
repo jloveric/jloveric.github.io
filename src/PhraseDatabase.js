@@ -434,17 +434,23 @@ let db = {
 //let detailedHelp = "Ok, you have accessed the help feature, I can't do anything for you now!"
 
 let text = []
+text.push('<div style="color:gray">')
 text.push('<div class="ui help" style="text-align:left;">Welcome to the Bot</div>')
-text.push('<div class="ui bulleted list help" style="text-align:left;">')
-text.push('<div class="item">Type <span>\'hello\' </span> to see which bot you are talking to or type <span>\'who am I speaking to\'<\span>.</div>')
-text.push('<div class="item">Type <span>\'what did I say\'</span> to see what I think you said.</div>')
-text.push('<div class="item">More coming.</div>')
+text.push('<ul class="ui bulleted list help" style="text-align:left;color:lightgray">')
+//text.push('<li class="item">This is a client side chatbot that uses tensorflowjs and some other tools.  You could also use it on a server if desired.</li>')
+text.push('<li class="item">Type <span>\'hello\' </span> to see which bot you are talking to or type <span>\'who am I speaking to\'<\span>.</li>')
+text.push('<li class="item">Type <span>\'what did I say\'</span> to see what I think you said.</li>')
+text.push('<li class="item">More coming.</li>')
+text.push('</ul')
 text.push('<p></p>')
 text.push('<div class="ui help" style="text-align:left;">I am built off of the following packages.</div>')
-text.push('<div><a href="https://github.com/jloveric/NeuralSentenceSearch/" target="_blank">NeuralSentenceSearch</a></div>')
-text.push('<div><a href="https://github.com/jloveric/NeuralPhraseX" target="_blank">NeuralPhraseX</a></div>')
-text.push('<div><a href="https://github.com/jloveric/NeuralChatbot" target="_blank">NeuralChatBot</a></div>')
-text.push('<div><a href="https://github.com/jloveric/neural-chatbot-react-retro" target="_blank">neural-chatbot-react-retro</a></div>')
+text.push('<ul style="color:lightgray" >')
+text.push('<li><a href="https://github.com/jloveric/NeuralSentenceSearch/" style="color:lightgray" target="_blank">NeuralSentenceSearch</a></li>')
+text.push('<li><a href="https://github.com/jloveric/NeuralPhraseX" style="color:lightgray" target="_blank">NeuralPhraseX</a></li>')
+text.push('<li><a href="https://github.com/jloveric/NeuralChatbot" style="color:lightgray" target="_blank">NeuralChatBot</a></li>')
+text.push('<li><a href="https://github.com/jloveric/neural-chatbot-react-retro" style="color:lightgray" target="_blank">neural-chatbot-react-retro</a></li>')
+text.push('</ul>')
+text.push('</div>')
 
 let detailedHelp = text.join(' ')
 

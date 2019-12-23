@@ -2,6 +2,45 @@
 let db = {
     "data": [
         {
+            exampleWildcards : {item : ["Sarah"], value : ["Safeway"]},
+            "phrase": [
+              "Where is (item)"
+            ],
+            "response": [
+              "(item) is in (value)"
+            ],
+            "negative": [
+              "There is no (item)",
+              "I don't know"
+            ],
+            "phraseType": "query",
+            "implies": [
+              "place"
+            ],
+            "target": [
+              "item"
+            ],
+            "storage": {
+              "phrase": {
+                "get": {
+                  "(item):in": "(value)"
+                }
+              },
+              "response": {
+                "set": {
+                  "(item):in": "(value)"
+                }
+              }
+            },
+            "meta": {
+              "style": [
+                "indefinite",
+                "2wc"
+              ],
+              "group": "in"
+            }
+          },
+        {
             exampleWildcards: {},
             "phrase": ["What did I say", "What do you think I said", "What was I talking about?"],
             "phraseType": "whatsaid",
@@ -438,7 +477,7 @@ text.push('<div style="color:gray">')
 text.push('<div class="ui help" style="text-align:left;">Welcome to the Bot</div>')
 text.push('<ul class="ui bulleted list help" style="text-align:left;color:lightgray">')
 //text.push('<li class="item">This is a client side chatbot that uses tensorflowjs and some other tools.  You could also use it on a server if desired.</li>')
-text.push('<li class="item">Type <span>\'hello\' </span> to get started. To see which bot you are talking to or type <span>\'who am I speaking to\'<\span>.</li>')
+text.push('<li class="item">Type <span>\'hello\' </span> to get started. To see which bot you are talking to or type <span>\'who am I speaking to\'<span>.</li>')
 text.push('<li class="item">Type <span>\'what did I say\'</span> to see what I think you said.</li>')
 text.push('<li class="item">More coming.</li>')
 text.push('</ul')

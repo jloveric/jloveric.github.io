@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div style={{ margin: '2%' }}>
-      <NeuralChatbotReactRetro backgroundColor='black' botConfig={defaultConfig}></NeuralChatbotReactRetro>
+      <NeuralChatbotReactRetro backgroundColor='black' botConfig={defaultConfig} finishedLoadingMessage="Ok, ready.  Type 'Help' for more information."></NeuralChatbotReactRetro>
     </div>
   );
 

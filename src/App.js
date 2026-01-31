@@ -11,13 +11,6 @@ function App() {
       stars: 44
     },
     {
-      name: 'language-interpolation',
-      description: 'Experiments in language interpolation with high order sparse neural networks',
-      url: 'https://github.com/jloveric/language-interpolation',
-      language: 'Python',
-      stars: 1
-    },
-    {
       name: 'high-order-implicit-representation',
       description: 'Implicit representation of various things using PyTorch and high order layers',
       url: 'https://github.com/jloveric/high-order-implicit-representation',
@@ -44,7 +37,14 @@ function App() {
       url: 'https://github.com/jloveric/shapely-mojo',
       language: 'Mojo',
       stars: 0
-    }
+    },
+    {
+      name: 'language-interpolation',
+      description: 'Experiments in language interpolation with high order sparse neural networks',
+      url: 'https://github.com/jloveric/language-interpolation',
+      language: 'Python',
+      stars: 1
+    },
   ];
 
   return (
